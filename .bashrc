@@ -9,6 +9,14 @@ PS1="\W > \[$(tput sgr0)\]"
 shopt -s autocd
 
 alias \
+        vpi='sudo xbps-install' \
+        vpr='sudo xbps-remove -R' \
+        vpu='sudo xbps-install -Su' \
+        vpq='xbps-query -Rs' \
+        vpc='sudo xbps-remove -Oo' \
+        vpk='sudo vkpurge rm all'
+
+alias \
         ls='ls -hN --color=auto --group-directories-first' \
 	cp='cp -iv' \
 	mv='mv -iv' \
@@ -22,12 +30,9 @@ alias bashrc='vim ~/.bashrc && source ~/.bashrc'
 alias mini='TERM=xterm-256color ssh mini'
 alias server='TERM=xterm-256color ssh server'
 
-alias t='telegram-desktop &'
-alias f='firefox &'
-alias c='chromium &'
-alias p='pcmanfm-qt &'
-
 export PATH=$PATH:$HOME/.local/bin
+export SVDIR=$HOME/.local/sv
+export XBPS_DISTDIR=/home/nero/git/void-packages/
 
 export EDITOR='vim'
 export TERMINAL='alacritty'
